@@ -4,6 +4,8 @@ from compiler.routes.code_executor import router as code_executor_router
 import os
 app = FastAPI()
 print("Current working directory:", os.getcwd())
+os.chdir("/app/compiler")
+print("Current working directory:", os.getcwd())
 # Middleware for CORS
 app.add_middleware(
     CORSMiddleware,
